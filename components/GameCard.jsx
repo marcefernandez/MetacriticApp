@@ -4,13 +4,13 @@ import { Text, View, Image, StyleSheet, Animated } from 'react-native';
 export function GameCard({ game }) {
     return (
         <View key={game.slug} style= {styles.card}>
-                        <Image source={{ uri: game.image }} style={styles.image} />
-                        <Text style={styles.title}>{game.title}</Text>
-                        <Text style={styles.score}>{game.score}</Text>
-                        <Text style={styles.description}>{game.description}</Text>
+            <Image source={{ uri: game.image }} style={styles.image} />
+            <Text style={styles.title}>{game.title}</Text>
+            <Text style={styles.score}>{game.score}</Text>
+            <Text style={styles.description}>{game.description}</Text>
         </View>
-    )
-}
+    );
+};
 
 export function AnimatedGameCard({ game, index }) {
     const opacity = useRef(new Animated.Value(0)).current;
@@ -29,7 +29,7 @@ export function AnimatedGameCard({ game, index }) {
             <GameCard game={game} />
         </Animated.View>
     );
-}
+};
 
 const styles = StyleSheet.create({
     card: {
@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
         width: 107, 
         height: 147,
         borderRadius: 10,
+        marginTop: 20,
     },
     title: {
         fontSize: 20,
