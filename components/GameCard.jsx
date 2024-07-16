@@ -34,6 +34,7 @@ export function AnimatedGameCard({ game, index }) {
 const styles = StyleSheet.create({
     card: {
         marginBottom: 42,
+        alignItems: 'center',
     },
     image: {
         width: 107, 
