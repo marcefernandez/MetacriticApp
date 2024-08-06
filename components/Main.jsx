@@ -17,7 +17,7 @@ export function Main() {
 
     return (
         <View
-            className="bg-black">
+            className="bg-violet-700">
             {games.length === 0 ? (
                 <ActivityIndicator size={ "large"} />
             ) : (

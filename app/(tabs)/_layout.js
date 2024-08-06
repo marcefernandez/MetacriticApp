@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import { HomeIcon, InfoIcon } from '../../components/Icons';
+import { HomeIcon, InfoIcon, UserIcon } from '../../components/Icons';
 
 
 export default function TabsLayout() {
@@ -8,7 +8,7 @@ export default function TabsLayout() {
             screenOptions={{
                 headerShown: false,
                 tabBarStyle: { backgroundColor: '#000' },
-                tabBarActiveTintColor: 'yellow',
+                tabBarActiveTintColor: 'violet',
             }}
         >
             <Tabs.Screen 
@@ -23,6 +23,13 @@ export default function TabsLayout() {
                 options={{ 
                     title: "About", 
                     tabBarIcon:({ color })=> <InfoIcon color={color} /> 
+                    }} 
+            />
+            <Tabs.Screen 
+                name="profileUser"  
+                options={{ 
+                    title: "Profile", 
+                    tabBarIcon:({ color })=> <UserIcon color={color} /> 
                     }} 
             />
         </Tabs>
